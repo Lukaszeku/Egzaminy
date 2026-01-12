@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h2>chat</h2></header>
+    <aside>
+        <h3>Chaty</h3>
+        <ul>
+            <li>Ogólny</li>
+            <li>Tematyczne</li>
+            <ol>
+                <li>Turystyczny</li>
+                <li>Żeglarski</li>
+                <li>Filatelistyczny</li>
+                <li>Hodowla zwierzątek domowych</li>
+            </ol>
+        </ul>
+        <h3>Uczestnicy</h3>
+        <p>Jolanta Nowak</p>
+        <img src="Jolka.jpg" alt="Jolanta Nowak">
+        <p>Krzystof Łukasiński</p>
+        <img src="Krzysiek.jpg" alt="Krzystof Łukasiński">
+    </aside>
+    <main>
+        <div class="chat" id="chat">
+            <div class="jolanta">
+                <img src="Jolka.jpg" alt="">
+                <p>Cześc idziesz jutro do kina?</p>
+            </div>
+            <div class="krzysztof">
+                <img src="Krzysiek.jpg" alt="">
+                <p>Tak! A ty?</p>
+            </div>
+        </div>
+        Wpisz wiadomosc: <input type="text" name="" id="wiadomosc"><button id="wyslij">Wyśdlij</button>
+        <br>
+        <button id="losowanie">Generuj losową odpowiedź</button>
+    </main>
+    <footer>Chat wykonal</footer>
+    <script>
+        document.getElementById("wyslij").addEventListener('click', () => {
+            const wiadomosc = document.getElementById("wiadomosc").value
+            const div = document.createElement("div")
+            div.className = "jolanta"
+            div.innerHTML = `<img src="Jolka.jpg" alt=""><p>${wiadomosc}</p>`
+            
+            var a = document.getElementById("chat")
+            a.appendChild(div)
+            a.scrollTop = a.scrollHeight
+        })
+        document.getElementById("losowanie").addEventListener('click', () => {
+            const listaOdpowiedzi = ["Świetnie!",
+            "Kto gra główną rolę?",
+            "Lubisz filmy Tego reżysera?",
+            "Będę 10 minut wcześniej",
+            "Może kupimy sobie popcorn?",
+            "Ja wolę Colę",
+            "Zaproszę jeszcze Grześka",
+            "Tydzień temu też byłem w kinie na Diunie",
+            "Ja funduję bilety"
+            ]
+            const losowaLicba = Math.floor(Math.random() * 8 + 1)
+            const div = document.createElement("div")
+            div.className = "krzysztof"
+            div.innerHTML = `<img src="Krzysiek.jpg" alt=""><p>${listaOdpowiedzi[losowaLicba]}</p>`
+
+            var a = document.getElementById("chat")
+            a.appendChild(div)
+            a.scrollTop = a.scrollHeight
+        })
+    </script>
+</body>
+</html>

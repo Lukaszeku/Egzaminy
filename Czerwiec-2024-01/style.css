@@ -1,0 +1,51 @@
+* {
+    font-family: Verdana
+}
+.motor {
+    display: block;
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    z-index: -10;
+}
+header {
+    background-color: rgba(60, 120, 160, 0.9);
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+}
+article {
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 2%;
+    width: 75%;
+    height: 600px;
+    font-size: 120%;
+    overflow: auto;
+    box-shadow: 10px 10px 7px dimgray;
+    float: left;
+}
+aside {
+    background-color: rgba(0, 100, 0, 0.6);
+    padding: 1%;
+    width: 15%;
+    height: 300px;
+    box-shadow: 10px 10px 7px dimgray;
+    float: right;
+}
+footer {
+    background-color: rgb(60, 120, 160);
+    opacity: 0.9;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+h1, h2 {
+    text-align: center;
+    font-style: italic;
+}
+dl:hover {
+    background-color: lightgreen;
+}
+dt, a {
+    color:white
+}
