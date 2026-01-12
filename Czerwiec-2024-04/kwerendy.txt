@@ -1,0 +1,3 @@
+SELECT zdjecia.tytul, zdjecia.plik FROM zdjecia WHERE zdjecia.polubienia >= 100;
+SELECT zdjecia.plik, zdjecia.tytul, zdjecia.polubienia, autorzy.imie, autorzy.nazwisko FROM zdjecia JOIN autorzy on zdjecia.autorzy_id=autorzy.id ORDER BY `autorzy`.`nazwisko` ASC;
+SELECT autorzy.imie, COUNT(zdjecia.id) AS 'iloscZdjec' FROM zdjecia JOIN autorzy on zdjecia.autorzy_id=autorzy.id GROUP BY autorzy.imie;

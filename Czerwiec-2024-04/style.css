@@ -1,0 +1,62 @@
+* {
+    font-family: Helvetica;
+}
+header, footer {
+    background-color: sienna;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.left, .right {
+    background-color: navajowhite;
+    width: 15%;
+    height: 700px;
+    float: left;
+}
+.middle {
+    width: 70%;
+    height: 700px;
+    overflow: scroll;
+    float: left;
+}
+footer {
+    clear: both;
+}
+img {
+    width: 100%;
+}
+.middle > div {
+    float: left;
+    width: 46%;
+    margin: 2%;
+    position: relative;
+}
+h3, p, a {
+    opacity: 0;
+    position: absolute;
+}
+h3 {
+    top: 5%;
+}
+p {
+    top: 30%;
+}
+a {
+    top: 70%;
+    left: 70%;
+    background-color: sienna;
+    padding: 15px;
+}
+.middle div img {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}  
+.middle div:hover img {
+    opacity: 0.3;
+}
+  
+.middle div:hover h3,
+.middle div:hover p,
+.middle div:hover a {
+    opacity: 1;
+}
