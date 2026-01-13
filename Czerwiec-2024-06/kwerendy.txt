@@ -1,0 +1,1 @@
+SELECT uczestnicy.imie, uczestnicy.nazwisko, uczestnicy.koszt FROM uczestnicy WHERE uczestnicy.zaplacono = 0;
