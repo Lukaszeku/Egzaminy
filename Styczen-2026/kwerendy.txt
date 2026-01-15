@@ -1,0 +1,4 @@
+SELECT towar.nazwa, towar.plik FROM towar LIMIT 10;
+SELECT towar.id, towar.nazwa FROM towar;
+SELECT towar.rodzaj, towar.nazwa, towar.cena FROM towar WHERE towar.id = 1;
+INSERT INTO zamowienie(id_towar, id_sklep, liczba_kg) VALUES (9,2,20);
