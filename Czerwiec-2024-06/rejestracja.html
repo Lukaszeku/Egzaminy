@@ -15,13 +15,13 @@
             <h2>Dane osobowe</h2>
             <input type="text" placeholder="Wpisz imię..." required id="inputName">
             <input type="text" placeholder="Wpisz nazwisko..." required id="inputSurname">
-            <button id="nextCard">Następna Karta</button>
+            <button id="firstCard">Następna Karta</button>
         </div>
         <div class="secondBlock">
             <h2>Dane kontaktowe</h2>
             <input type="email" placeholder="Twój e-mail..." name="" id="inputEmail">
             <input type="tel" placeholder="Twój numer telefonu..." name="" id="inputTelephone">
-            <button id="nextCard">Następna Karta</button>
+            <button id="secondCard">Następna Karta</button>
         </div>
         <div class="thirdBlock">
             <h2>Hasło do logowania</h2>
@@ -45,6 +45,15 @@
         </table>
     </footer>
     <footer><p><a href="https://kwiaty.pl">Internetowa kwiaciarnia</a></p></footer>
-    <footer><p>Strone wykonał: Lukaszeku</p></footer>
+    <footer><p>Strone wykonał: Lukaszeku</p> <button>dad</button></footer>
+    <script>
+        const firstButton = document.getElementById('firstCard')
+        const secondButton = document.getElementById('secondCard')
+        const confirm = document.getElementById('confirm')
+        const firstBlock = document.getElementById('firstBlock')
+        firstButton.addEventListener('click', () => {
+            firstBlock.style.color = 'red'
+        })
+    </script>
 </body>
 </html>
